@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/txtUrl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:ems="1"
+        android:freezesText="true"
+        android:hint="Enter URL To Download"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnDownload"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtUrl"
+        android:layout_below="@+id/txtUrl"
+        android:onClick="DownloadItem"
+        android:text="Download" />
+
+    <ListView
+        android:id="@+id/dList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtUrl"
+        android:layout_alignParentBottom="true"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+
+        android:layout_alignParentTop="false"
+        android:layout_alignRight="@+id/btnDownload"
+        android:layout_below="@+id/btnDownload"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:animateLayoutChanges="true"
+        android:longClickable="true"
+        android:smoothScrollbar="true"
+        android:visibility="invisible" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/dListHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtUrl"
+        android:layout_below="@+id/btnDownload"
+        android:layout_marginTop="-10dp"
+        android:shadowColor="#CCCCCC"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:text="Download History"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#555555"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/dListHeader"
+        android:layout_alignRight="@+id/btnDownload"
+        android:gravity="center"
+        android:importantForAccessibility="auto"
+        android:text="No Recent Downloads"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#888888"
+        android:textSize="35dp" />
+
+</RelativeLayout>

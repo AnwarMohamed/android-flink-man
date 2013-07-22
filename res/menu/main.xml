@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:title="Clear Download History" android:id="@+id/action_clear_history"/>
+    <item android:title="About" android:id="@+id/action_about"/>
+    <item android:id="@+id/action_exit" android:title="Exit" />
+
+</menu>
